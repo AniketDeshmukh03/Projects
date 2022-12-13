@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management System</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+<style>
+/* Create a top navigation bar with a black background color  */
+body {
+	
+	background-image:
+		url("https://img.freepik.com/premium-photo/heap-open-books-school-room-background_488220-17923.jpg"  ) ;
+		background-repeat: no-repeat;
+	  background-size: 1360px 760px;
+		
+}
+
+.homePg {
+	background-color: #333;
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.homePg a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.homePg a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.homePg a.split {
+	float: right;
+	background-color:orange;
+	color: white;
+}
+</style>
+<body>
+
+	<header>
+		<img alt="logo"
+			src="https://img.freepik.com/free-vector/flat-design-library-logo-design_23-2149324478.jpg?w=740&t=st=1670840749~exp=1670841349~hmac=113483180503040021f8f684b02b4202ef02a1699a70a0b4bc047f5ed528a600"
+			height="70" width="80">
+	</header>
+
+
+	<div class="homePg">
+		<a th:href="@{/menuBar}">Menu</a>
+		 <a th:href="@{/viewAllBooks}">View All Books </a> 
+			 
+			<a th:href="@{/logOutStd}" class="split">Log Out</a>
+	</div>
+
+	<div style="background-color: gray;">
+		<h3>Hello User,</h3>
+		<h2 align="center">
+			<b>WELCOME TO THE LIBRARY</b>
+		</h2>
+		<hr>
+		<h2>
+			<b>Mission:-</b>
+		</h2>
+		<p>
+		<ul>
+			<li>“Reading is to the mind, what causes food to the health”.</li>
+			<li>Totake all sorts of the efforts to enrich the knowledge by
+				providing recent advanced Journals, books and the best possible
+				services to the students and faculty.</li>
+		</ul>
+		</p>
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>

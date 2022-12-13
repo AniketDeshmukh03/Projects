@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management System</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+<style>
+body{background-color: gray;
+}
+</style>
+<body>
+<header>
+		<img alt="logo"
+			src="https://img.freepik.com/free-vector/flat-design-library-logo-design_23-2149324478.jpg?w=740&t=st=1670840749~exp=1670841349~hmac=113483180503040021f8f684b02b4202ef02a1699a70a0b4bc047f5ed528a600"
+			height="50" width="50">
+	</header>
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center">Store a New Book</h1>
+			
+		</div>
+		<form th:action="@{/insertNewBooks}" th:object=${bookDetails}
+			method="post">
+
+			
+			<div class="form-group">
+				<label> Name Of Book :-</label> <input type="text" name="bookName"
+					th:field="*{name}" class="form-control"
+					placeholder="Enter a Book Name">
+			</div>
+			<div class="form-group">
+				<label>Author Name :-</label> <input type="text" name="author"
+					th:field="*{authorName}" class="form-control"
+					placeholder="Enter Author Name">
+			</div>
+			<div class="form-group">
+				<label>Availability Of Book :-</label> <input type="text"
+					name="available" th:field="*{available}"
+					class="form-control" placeholder="Enter Available Book Count">
+			</div>
+			<div class="form-group">
+				<label>Name Of Department :-</label> <input type="text"
+					name="department" th:field="*{departmet}"
+					class="form-control" placeholder="Enter Department Name ">
+			</div>
+
+			<div class="box-footer">
+				<button type="submit" class="btn btn-primary">Add a Book</button>
+			</div>
+		</form>
+
+	</div>
+	
+
+</body>
+</html>
